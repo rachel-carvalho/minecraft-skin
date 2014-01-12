@@ -290,16 +290,17 @@ Skin.prototype.createPlayerObject = function(scene) {
 
   headgroup.add(unrotatedHeadMesh);
 
-  var helmet = this.cubeFromPlanes(9, this.charMaterialTrans);
-  helmet.position.y = 2;
-  this.UVMap(helmet.children[0], 0, 32+8, 8, 8, 8);
-  this.UVMap(helmet.children[1], 0, 32+24, 8, 8, 8);
-  this.UVMap(helmet.children[2], 0, 32+8, 0, 8, 8, 1);
-  this.UVMap(helmet.children[3], 0, 32+16, 0, 8, 8, 3);
-  this.UVMap(helmet.children[4], 0, 32+0, 8, 8, 8);
-  this.UVMap(helmet.children[5], 0, 32+16, 8, 8, 8);
+  // // helmet causes glitches when in first person with high x/z values (> 500)
+  // var helmet = this.cubeFromPlanes(9, this.charMaterialTrans);
+  // helmet.position.y = 2;
+  // this.UVMap(helmet.children[0], 0, 32+8, 8, 8, 8);
+  // this.UVMap(helmet.children[1], 0, 32+24, 8, 8, 8);
+  // this.UVMap(helmet.children[2], 0, 32+8, 0, 8, 8, 1);
+  // this.UVMap(helmet.children[3], 0, 32+16, 0, 8, 8, 3);
+  // this.UVMap(helmet.children[4], 0, 32+0, 8, 8, 8);
+  // this.UVMap(helmet.children[5], 0, 32+16, 8, 8, 8);
   
-  headgroup.add(helmet);
+  // headgroup.add(helmet);
   
   var ears = new THREE.Object3D();
   
